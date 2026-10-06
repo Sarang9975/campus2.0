@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #1746B8;
+  --color-brand-blue-hover: #123796;
+  --color-brand-blue-subtle: #E8EEFB;
+  --color-brand-amber: #F5A623;
+  --color-brand-amber-hover: #D98E16;
+  --color-brand-amber-subtle: #FEF6E9;
+  --color-brand-black: #111111;
+  --color-brand-offwhite: #FAFAF8;
+  --color-brand-neutral: #F1F2F5;
+  --color-brand-border: #E4E6EB;
+  --color-brand-muted: #666D7A;
+  
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --bg-primary: #FAFAF8;
+  --text-primary: #111111;
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAFAF8;
+  color: #111111;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utility classes */
+.focus-ring {
+  outline: none;
+  transition: box-shadow 0.15s ease;
+}
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 2px #FAFAF8, 0 0 0 4px #1746B8;
+}
+
+/* Tactile push feedback */
+.press-tactile {
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+.press-tactile:active {
+  transform: scale(0.975);
+}
+
+/* Subtle clean scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8DCE3;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BAC0CD;
+}
